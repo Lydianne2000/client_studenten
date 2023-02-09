@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <title>CV Lydianne De Comarmond</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script defer src="js/gdpr.js"></script> 
+    <script defer src="js/carousel.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
 
 <div class="page">
+    
     <section class="personalia">
-
         <div class="personalia-logo-slideshow">
             <div class="personalia-logo-slideshow__slide fade">
                 <img class="person-logo" src="images/profielfoto.png">
             </div>
             <div class="personalia-logo-slideshow__slide fade">
-                <img class="person-logo" src="images/profielfoto2.png">
+                <img class="person-logo" src="images/profielfoto2.jpg">
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <!--<img class="person-logo" src="images/profielfoto.png">-->
         <h1 class="person-name">Lydianne De Comarmond</h1>
         <section class="personalia-characteristics">
             <h3 class="personalia-characteristics__title">Eigenschappen</h3>
@@ -98,34 +97,20 @@
         </section>
 
     </section>
+    <section class="gdpr-consent hide">
+
+        <div class="gdpr-consent__description">
+            <p>Deze website gebruikt cookies.
+            We gebruiken cookies om content te personaliseren, voor social media en het analyseren
+                van verkeer op de website, advertenties.</p>
+        </div>
+    
+        <div class="gdpr-consent__choice">
+            <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
+            <button class="gdpr-consent__button--reject">Neu, misschien later</button>
+        </div>
+    </section>
 </div>
-
-<script>
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("personalia-logo-slideshow__slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-} 
-</script>
-
 </body>
 
 </html>

@@ -2,8 +2,8 @@
 class GDPR {
 
     constructor() {
-        this.showStatus();
-        this.showContent();
+        //this.showStatus();
+        //this.showContent();
         this.bindEvents();
 
         if(this.cookieStatus() !== 'accept' && this.cookieStatus() !== 'reject') this.showGDPR();
@@ -13,8 +13,8 @@ class GDPR {
         let buttonAccept = document.querySelector('.gdpr-consent__button--accept');
         buttonAccept.addEventListener('click', () => {
             this.cookieStatus('accept');
-            this.showStatus();
-            this.showContent();
+            //this.showStatus();
+            //this.showContent();
             this.hideGDPR();
         });
 
@@ -23,14 +23,14 @@ class GDPR {
         let buttonReject = document.querySelector('.gdpr-consent__button--reject');
         buttonReject.addEventListener('click', () => {
             this.cookieStatus('reject');
-            this.showStatus();
-            this.showContent();
+            //this.showStatus();
+            //this.showContent();
             this.hideGDPR();
 });
 
     }
 
-
+    /*
     showContent() {
         this.resetContent();
         const status = this.cookieStatus() == null ? 'not-chosen' : this.cookieStatus();
@@ -38,7 +38,8 @@ class GDPR {
         element.classList.add('show');
 
     }
-
+    */
+    /*
     resetContent(){
         const classes = [
             '.content-gdpr-accept',
@@ -49,13 +50,13 @@ class GDPR {
             document.querySelector(c).classList.add('hide');
             document.querySelector(c).classList.remove('show');
         }
-    }
-
+    }*/
+    /*
     showStatus() {
         document.getElementById('content-gpdr-consent-status').innerHTML =
             this.cookieStatus() == null ? 'Niet gekozen' : this.cookieStatus();
     }
-
+    */
     cookieStatus(status) {
         if (status) localStorage.setItem('gdpr-consent-choice', status);
 
